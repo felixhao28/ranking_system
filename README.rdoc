@@ -16,24 +16,24 @@ This is the ranking system for Contests 2014
 
 * How to use
 
-  * Registering new user
+  * Registering new user<br>
     You need to register users before trying to search for worthy opponents or update his rating.
     
     get http://localhost:3000/posts/new
     
-  * Matching opponents for a user
+  * Matching opponents for a user<br>
     Returns three opponents with closest ratings.
     
-    get http://localhost:3000/casual/username
-    or
+    get http://localhost:3000/casual/username<br>
+    or<br>
     get http://localhost:3000/normal/username
   
-  * Upon finishing a game...
+  * Upon finishing a game...<br>
     Update the ratings for all four players according to the result of a game.
     
-    get http://localhost:3000/test
-    or
-    post http://localhost:3000/update_casual
-    or
+    get http://localhost:3000/test<br>
+    or<br>
+    post http://localhost:3000/update_casual<br>
+    or<br>
     post http://localhost:3000/update_normal
 
