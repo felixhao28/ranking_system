@@ -24,9 +24,9 @@ This is the ranking system for Contests 2014
   * Matching opponents for a user
     Returns three opponents with closest ratings.
     
-    get http://localhost:3000/casual/\<username>
+    get http://localhost:3000/casual/\<username\>
     or
-    get http://localhost:3000/normal/\<username>
+    get http://localhost:3000/normal/\<username\>
   
   * Upon finishing a game...
     Update the ratings for all four players according to the result of a game.
