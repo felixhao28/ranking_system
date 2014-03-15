@@ -1,28 +1,39 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the ranking system for Contests 2014
 
-Things you may want to cover:
+* Prerequisites
 
-* Ruby version
+Check <tt>Gemfile</tt> for prerequisites and versions.
 
-* System dependencies
+* Database creation & initialization
 
-* Configuration
+<tt>rake db:migrate</tt>.
 
-* Database creation
+* How to run
 
-* Database initialization
+<tt>rails s</tt>
 
-* How to run the test suite
+* How to use
 
-* Services (job queues, cache servers, search engines, etc.)
+** Registering new user
+You need to register users before trying to search for worthy opponents or update his rating.
 
-* Deployment instructions
+get http://localhost:3000/posts/new
 
-* ...
+** Matching opponents for a user
+Returns three opponents with closest ratings.
 
+get http://localhost:3000/casual/<username>
+or
+get http://localhost:3000/normal/<username>
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+** Upon finishing a game...
+Update the ratings for all four players according to the result of a game.
+
+get http://localhost:3000/test
+or
+post http://localhost:3000/update_casual
+or
+post http://localhost:3000/update_normal
+
