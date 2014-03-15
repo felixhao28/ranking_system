@@ -1,0 +1,18 @@
+Casual mode:<br>
+<form method="POST" action="./update_casual">
+	Winner: <input type="text" name="winner"><br>
+	Loser0: <input type="text" name="loser0"><br>
+	Loser1: <input type="text" name="loser1"><br>
+	Loser2: <input type="text" name="loser2"><br>
+	<input type="submit" value="Casual submit">
+<%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %> 
+</form><br>
+Normal mode:<br>
+<form method="POST" action="./update_normal">
+	Winner: <input type="text" name="winner"><br>
+	Loser0: <input type="text" name="loser0"><br>
+	Loser1: <input type="text" name="loser1"><br>
+	Loser2: <input type="text" name="loser2"><br>
+	<input type="submit" value="Normal submit">
+<%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %> 
+</form>

@@ -1,0 +1,5 @@
+class Ranking < ActiveRecord::Base
+
+	self.table_name = "ranking"
+	self.primary_key = "name"
+end
